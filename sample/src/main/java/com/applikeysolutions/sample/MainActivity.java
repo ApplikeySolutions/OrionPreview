@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         imgIcon.setOnClickListener(v -> {
-
             upAnimationImageView.showAnimation();
             arcUpAnimationTv.showAnimation();
             increaseAnimationImage.showAnimation();
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         activityMain.setOnClickListener(v -> {
-
             downAnimationImageView.showAnimation();
             arcDownAnimationTv.showAnimation();
             decreaseAnimationImage.showAnimation();
@@ -90,37 +88,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initAnimation() {
-        tv.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                tv.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                increaseAnimationImage = new ScaleAnimation.ScaleAnimationBuilder(imgBackground, 1.5f, 1.5f)
-                        .build();
-                increaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tv, 1.5f, 1.5f)
-                        .build();
-                decreaseAnimationImage = new ScaleAnimation.ScaleAnimationBuilder(imgBackground, 1f, 1f)
-                        .build();
-                decreaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tv, 1f, 1f)
-                        .build();
-                upAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(imgIcon,
-                        TranslationAnimation.TranslationMode.TranslationY, 0, -(screenHeight / 3))
-                        .build();
-                arcUpAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tv,
-                        TranslationAnimation.TranslationMode.TranslationAll, 0, screenHeight / 5)
-                        .arcMode(TranslationAnimation.ArcMode.ArcUpward)
-                        .additionStartPoint(0)
-                        .additionEndPoint(screenWidth / 2 - tv.getWidth() / 2)
-                        .build();
-                downAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(imgIcon,
-                        TranslationAnimation.TranslationMode.TranslationY, -(screenHeight / 3), 0)
-                        .build();
-                arcDownAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tv,
-                        TranslationAnimation.TranslationMode.TranslationAll, screenHeight / 5, 0)
-                        .arcMode(TranslationAnimation.ArcMode.ArcDownard)
-                        .additionStartPoint(screenWidth / 2 - tv.getWidth() / 2)
-                        .additionEndPoint(0)
-                        .build();
-            }
+        tv.post(() -> {
+            increaseAnimationImage = new ScaleAnimation.ScaleAnimationBuilder(imgBackground, 1.5f, 1.5f)
+                    .build();
+            increaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tv, 1.5f, 1.5f)
+                    .build();
+            decreaseAnimationImage = new ScaleAnimation.ScaleAnimationBuilder(imgBackground, 1f, 1f)
+                    .build();
+            decreaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tv, 1f, 1f)
+                    .build();
+            upAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(imgIcon,
+                    TranslationAnimation.TranslationMode.TranslationY, 0, -(screenHeight / 3))
+                    .build();
+            arcUpAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tv,
+                    TranslationAnimation.TranslationMode.TranslationAll, 0, screenHeight / 5)
+                    .arcMode(TranslationAnimation.ArcMode.ArcUpward)
+                    .additionStartPoint(0)
+                    .additionEndPoint(screenWidth / 2 - tv.getWidth() / 2)
+                    .build();
+            downAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(imgIcon,
+                    TranslationAnimation.TranslationMode.TranslationY, -(screenHeight / 3), 0)
+                    .build();
+            arcDownAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tv,
+                    TranslationAnimation.TranslationMode.TranslationAll, screenHeight / 5, 0)
+                    .arcMode(TranslationAnimation.ArcMode.ArcDownard)
+                    .additionStartPoint(screenWidth / 2 - tv.getWidth() / 2)
+                    .additionEndPoint(0)
+                    .build();
         });
     }
 

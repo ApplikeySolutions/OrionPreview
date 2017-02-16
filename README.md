@@ -10,7 +10,7 @@ A simple animation with translation or scale views.
 ###Scale Animation
 ```java
 ScaleAnimation scaleAnimation =
-                        new ScaleAnimation.ScaleAnimationBuilder(view, 1.5f, 1.5f)
+                        new ScaleAnimation.ScaleAnimationBuilder(view, scaleRate, scaleRate)
                         .build();
 scaleAnimation.show();
 ```
@@ -24,6 +24,12 @@ TranslationAnimation tanslationAnimation =
                                                .additionEndPoint(endX)
                                                .build();
 tanslationAnimation.show();
+```
+###Blur Animation
+```java
+Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(),
+                R.drawable.image);
+blurredBitmap = BlurBuilder.blur(MainActivity.this, originalBitmap);
 ```
 See [sample](sample/src/main/java/com/applikeysolutions/sample/MainActivity.java).
 
