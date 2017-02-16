@@ -4,10 +4,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/android_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name="com.applikeysolutions.sample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

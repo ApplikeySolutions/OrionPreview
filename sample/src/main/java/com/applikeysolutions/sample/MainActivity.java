@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.DisplayMetrics;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
@@ -21,8 +20,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.cardView)
-    CardView cardView;
+    @BindView(R.id.imgIcon)
+    ImageView imgIcon;
     @BindView(R.id.activity_main)
     RelativeLayout activityMain;
     @BindView(R.id.tv)
@@ -37,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private ScaleAnimation decreaseAnimationImage;
     private ScaleAnimation increaseAnimationText;
     private ScaleAnimation decreaseAnimationText;
-    private TranslationAnimation upAnimationCardView;
+    private TranslationAnimation upAnimationImageView;
     private TranslationAnimation arcUpAnimationTv;
-    private TranslationAnimation downAnimationCardView;
+    private TranslationAnimation downAnimationImageView;
     private TranslationAnimation arcDownAnimationTv;
 
     @Override
@@ -53,30 +52,32 @@ public class MainActivity extends AppCompatActivity {
         screenWidth = displaymetrics.widthPixels;
 
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.water);
+                R.drawable.sample_background);
         blurredBitmap = BlurBuilder.blur(MainActivity.this, originalBitmap);
 
 
-        cardView.setOnClickListener(v -> {
-            upAnimationCardView.showAnimation();
+        imgIcon.setOnClickListener(v -> {
+
+            upAnimationImageView.showAnimation();
             arcUpAnimationTv.showAnimation();
             increaseAnimationImage.showAnimation();
             increaseAnimationText.showAnimation();
 
-            cardView.setClickable(false);
+            imgIcon.setClickable(false);
             activityMain.setClickable(true);
             addBlur();
+            tv.setPivotX(tv.getWidth());
         });
 
         activityMain.setOnClickListener(v -> {
 
-            downAnimationCardView.showAnimation();
+            downAnimationImageView.showAnimation();
             arcDownAnimationTv.showAnimation();
             decreaseAnimationImage.showAnimation();
             decreaseAnimationText.showAnimation();
 
             activityMain.setClickable(false);
-            cardView.setClickable(true);
+            imgIcon.setClickable(true);
             removeBlur();
         });
     }
@@ -101,22 +102,22 @@ public class MainActivity extends AppCompatActivity {
                         .build();
                 decreaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tv, 1f, 1f)
                         .build();
-                upAnimationCardView = new TranslationAnimation.TranslationAnimationBuilder(cardView,
+                upAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(imgIcon,
                         TranslationAnimation.TranslationMode.TranslationY, 0, -(screenHeight / 3))
                         .build();
                 arcUpAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tv,
-                        TranslationAnimation.TranslationMode.TranslationAll, 0, screenHeight / 4)
+                        TranslationAnimation.TranslationMode.TranslationAll, 0, screenHeight / 5)
                         .arcMode(TranslationAnimation.ArcMode.ArcUpward)
                         .additionStartPoint(0)
-                        .additionEndPoint(screenWidth / 2 - tv.getWidth())
+                        .additionEndPoint(screenWidth / 2 - tv.getWidth() / 2)
                         .build();
-                downAnimationCardView = new TranslationAnimation.TranslationAnimationBuilder(cardView,
+                downAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(imgIcon,
                         TranslationAnimation.TranslationMode.TranslationY, -(screenHeight / 3), 0)
                         .build();
                 arcDownAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tv,
-                        TranslationAnimation.TranslationMode.TranslationAll, screenHeight / 4, 0)
+                        TranslationAnimation.TranslationMode.TranslationAll, screenHeight / 5, 0)
                         .arcMode(TranslationAnimation.ArcMode.ArcDownard)
-                        .additionStartPoint(screenWidth / 2 -  tv.getWidth())
+                        .additionStartPoint(screenWidth / 2 - tv.getWidth() / 2)
                         .additionEndPoint(0)
                         .build();
             }
@@ -125,10 +126,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void addBlur() {
-        imgBackground.setBackground(new BitmapDrawable(getResources(), blurredBitmap));
+        imgBackground.setImageBitmap(new BitmapDrawable(getResources(), blurredBitmap).getBitmap());
     }
 
     private void removeBlur() {
-        imgBackground.setBackgroundResource(R.drawable.water);
+        imgBackground.setImageResource(R.drawable.sample_background);
     }
 }

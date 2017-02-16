@@ -10,8 +10,8 @@
         android:id="@+id/imgBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="0dp"
-        android:background="@drawable/water"/>
+        android:src="@drawable/sample_background"
+        android:scaleType="centerCrop" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,23 +25,21 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:background="@android:color/holo_blue_light" />
+            android:text="@string/app_name"
+            android:textColor="@color/colorFont"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="2"
+            android:letterSpacing="0.2"/>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardView"
+        <ImageView
+            android:id="@+id/imgIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/android_icon"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            card_view:cardBackgroundColor="@android:color/holo_blue_light">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="40dp"
-                android:text="Hello World!"/>
-
-        </android.support.v7.widget.CardView>
+            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 </RelativeLayout>

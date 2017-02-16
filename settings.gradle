@@ -1,1 +1,1 @@
-include ':sample', ':animation'
+include ':sample', ':sena-library'
