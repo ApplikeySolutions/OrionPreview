@@ -7,11 +7,16 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 
-public class BlurBuilder {
-    private static final float BITMAP_SCALE = 0.4f;
-    private static final float BLUR_RADIUS = 7f;
+public class BlurAnimation {
+    private final float BITMAP_SCALE;
+    private final float BLUR_RADIUS;
 
-    public static Bitmap blur(Context context, Bitmap image) {
+    private BlurAnimation(BlurAnimation.BlurAnimationBuilder builder) {
+        this.BITMAP_SCALE = builder.BITMAP_SCALE;
+        this.BLUR_RADIUS = builder.BLUR_RADIUS;
+    }
+
+    public Bitmap blur(Context context, Bitmap image) {
         int width = Math.round(image.getWidth() * BITMAP_SCALE);
         int height = Math.round(image.getHeight() * BITMAP_SCALE);
 
@@ -28,5 +33,19 @@ public class BlurBuilder {
         tmpOut.copyTo(outputBitmap);
 
         return outputBitmap;
+    }
+
+    public static class BlurAnimationBuilder {
+        private final float BITMAP_SCALE;
+        private final float BLUR_RADIUS;
+
+        public BlurAnimationBuilder(float bitmapScale, float blurRadius) {
+            this.BITMAP_SCALE = bitmapScale;
+            this.BLUR_RADIUS = blurRadius;
+        }
+
+        public BlurAnimation build() {
+            return new BlurAnimation(this);
+        }
     }
 }

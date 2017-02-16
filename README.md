@@ -27,9 +27,12 @@ tanslationAnimation.show();
 ```
 ###Blur Animation
 ```java
+BlurAnimation blurAnimation =
+                        new BlurAnimation.BlurAnimationBuilder(bitmapScale, blurRadius)
+                        .build();
 Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(),
                 R.drawable.image);
-blurredBitmap = BlurBuilder.blur(MainActivity.this, originalBitmap);
+blurredBitmap = blurAnimation.blur(MainActivity.this, originalBitmap)
 ```
 See [sample](sample/src/main/java/com/applikeysolutions/sample/MainActivity.java).
 

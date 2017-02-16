@@ -6,12 +6,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.applikeysolutions.animation.BlurBuilder;
+import com.applikeysolutions.animation.BlurAnimation;
 import com.applikeysolutions.animation.animation.ScaleAnimation;
 import com.applikeysolutions.animation.animation.TranslationAnimation;
 
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private TranslationAnimation arcUpAnimationTv;
     private TranslationAnimation downAnimationImageView;
     private TranslationAnimation arcDownAnimationTv;
+    private BlurAnimation blurAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +50,6 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         screenHeight = displaymetrics.heightPixels;
         screenWidth = displaymetrics.widthPixels;
-
-        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.sample_background);
-        blurredBitmap = BlurBuilder.blur(MainActivity.this, originalBitmap);
-
 
         imgIcon.setOnClickListener(v -> {
             upAnimationImageView.showAnimation();
@@ -115,6 +110,12 @@ public class MainActivity extends AppCompatActivity {
                     .additionStartPoint(screenWidth / 2 - tv.getWidth() / 2)
                     .additionEndPoint(0)
                     .build();
+            blurAnimation = new BlurAnimation.BlurAnimationBuilder(0.4f, 7f)
+                    .build();
+
+            Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(),
+                    R.drawable.sample_background);
+            blurredBitmap = blurAnimation.blur(MainActivity.this, originalBitmap);
         });
     }
 
