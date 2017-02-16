@@ -4,7 +4,7 @@
 
 A simple animation with translation or scale views.
 
-<img src="screenshots/demo-sena.gif?raw=true" alt="" widht="240"/>
+<img src="screenshots/demo-sena.gif?raw=true" alt="" width="240"/>
 
 ## Usage
 ###Scale Animation
