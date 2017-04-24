@@ -7,14 +7,14 @@ A simple animation with translation or scale views.
 <img src="screenshots/demo-sena.gif?raw=true" alt="" width="240"/>
 
 ## Usage
-###Scale Animation
+### Scale Animation
 ```java
 ScaleAnimation scaleAnimation =
                         new ScaleAnimation.ScaleAnimationBuilder(view, scaleRate, scaleRate)
                         .build();
 scaleAnimation.show();
 ```
-###Translation Animation
+### Translation Animation
 ```java
 TranslationAnimation tanslationAnimation =
                         new TranslationAnimation.TranslationAnimationBuilder(view,
@@ -25,7 +25,7 @@ TranslationAnimation tanslationAnimation =
                                                .build();
 tanslationAnimation.show();
 ```
-###Blur Animation
+### Blur Animation
 ```java
 BlurAnimation blurAnimation =
                         new BlurAnimation.BlurAnimationBuilder(bitmapScale, blurRadius)
