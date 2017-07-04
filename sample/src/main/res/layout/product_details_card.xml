@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:paddingTop="@dimen/default_margin"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:text="@string/product_price"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:text="@string/product_state"
+                android:background="@color/colorProductStateBackground"/>
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_options"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_product_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="@string/product_description_title"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price"
+                android:layout_marginTop="12dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextGray"
+                android:text="@string/product_description"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/product_colors_title"/>
+
+                <ImageView
+                    android:layout_width="@dimen/circles_size"
+                    android:layout_height="@dimen/circles_size"
+                    android:layout_marginLeft="24dp"
+                    android:src="@drawable/circle_white"/>
+
+                <ImageView
+                    android:layout_width="@dimen/circles_size"
+                    android:layout_height="@dimen/circles_size"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/circle_black"/>
+
+                <ImageView
+                    android:layout_width="@dimen/circles_size"
+                    android:layout_height="@dimen/circles_size"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/circle_blue"/>
+
+                <ImageView
+                    android:layout_width="@dimen/circles_size"
+                    android:layout_height="@dimen/circles_size"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/circle_yellow"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:text="@string/product_buy_button_text"
+                android:background="@color/colorButtonBackground"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

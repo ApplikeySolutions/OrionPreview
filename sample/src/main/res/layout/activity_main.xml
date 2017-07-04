@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/rl_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.applikeysolutions.sample.MainActivity">
@@ -16,30 +16,35 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
+        
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_back_arrow_white"/>
 
         <TextView
-            android:id="@+id/tv"
+            android:id="@+id/tv_product_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/colorFont"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="4"
-            android:shadowDy="4"
-            android:shadowRadius="2"
-            android:letterSpacing="0.2"/>
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="@string/toolbar_title"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
 
-        <ImageView
-            android:id="@+id/imgIcon"
-            android:layout_width="wrap_content"
+        <include
+            layout="@layout/product_details_card"
+            android:id="@+id/cv_product_details"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/android_icon"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"/>
+
     </RelativeLayout>
+
 </RelativeLayout>
