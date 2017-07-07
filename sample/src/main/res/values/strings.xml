@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Sena</string>
+
+    <string name="toolbar_title">Light Jeans\nRegulat Fit</string>
+
+    <string name="product_price">$200.00</string>
+    <string name="product_state">In Stock</string>
+    <string name="product_description_title">Description</string>
+    <string name="product_description">There are many variations of passages of Lorem Ipsum text available, but the majority have. suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.</string>
+    <string name="product_colors_title">Colors:</string>
+    <string name="product_buy_button_text">Buy Now</string>
 </resources>

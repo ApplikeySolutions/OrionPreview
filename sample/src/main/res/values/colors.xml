@@ -4,4 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorFont">#97aa43</color>
+
+    <color name="colorTextGray">#a9a9a9</color>
+    <color name="colorCircleBorder">#e3e3e3</color>
+    <color name="colorCircleBlue">#1e7dd3</color>
+    <color name="colorCircleYellow">#d3b529</color>
+    <color name="colorButtonBackground">#0e1822</color>
+    <color name="colorProductStateBackground">#f1f3f6</color>
 </resources>
