@@ -54,8 +54,8 @@ public class TranslationAnimation extends BaseAnimation {
                 animatorTranslationY.setDuration(SMALL_ANIMATION_DURATION);
                 animatorTranslationX.setDuration(LARGE_ANIMATION_DURATION);
             } else {
-                animatorTranslationY.setDuration(LARGE_ANIMATION_DURATION);
-                animatorTranslationX.setDuration(SMALL_ANIMATION_DURATION);
+                animatorTranslationY.setDuration(SMALL_ANIMATION_DOWNARD);
+                animatorTranslationX.setDuration(LARGE_ANIMATION_DURATION);
             }
 
             animatorSet.setInterpolator(new LinearOutSlowInInterpolator());

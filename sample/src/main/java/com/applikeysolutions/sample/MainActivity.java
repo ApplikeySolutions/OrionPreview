@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         cvProductDetails.setClickable(false);
         rlContainer.setClickable(true);
         addBlur();
-        tvProductTitle.setPivotX(tvProductTitle.getWidth());
     }
 
     @OnClick(R.id.rl_container)
@@ -115,25 +114,25 @@ public class MainActivity extends AppCompatActivity {
     private void initAnimation() {
         tvProductTitle.post(() -> {
             increaseAnimationImage = new ScaleAnimation.ScaleAnimationBuilder(imgBackground, 1.5f, 1.5f).build();
-            increaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tvProductTitle, 2f, 2f).build();
+            increaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tvProductTitle, 2.25f, 2.25f).build();
             decreaseAnimationImage = new ScaleAnimation.ScaleAnimationBuilder(imgBackground, 1f, 1f).build();
             decreaseAnimationText = new ScaleAnimation.ScaleAnimationBuilder(tvProductTitle, 1f, 1f).build();
             upAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(cvProductDetails,
                     TranslationAnimation.TranslationMode.TranslationY, 0, -(screenHeight / 2.2f))
                     .build();
             arcUpAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tvProductTitle,
-                    TranslationAnimation.TranslationMode.TranslationAll, 0, screenHeight / 8)
+                    TranslationAnimation.TranslationMode.TranslationAll, 0, screenHeight / 10)
                     .arcMode(TranslationAnimation.ArcMode.ArcUpward)
                     .additionStartPoint(0)
-                    .additionEndPoint(screenWidth / 2 - tvProductTitle.getWidth() / 2)
+                    .additionEndPoint(screenWidth / 2 - tvProductTitle.getWidth())
                     .build();
             downAnimationImageView = new TranslationAnimation.TranslationAnimationBuilder(cvProductDetails,
                     TranslationAnimation.TranslationMode.TranslationY, -(screenHeight / 3), 0)
                     .build();
             arcDownAnimationTv = new TranslationAnimation.TranslationAnimationBuilder(tvProductTitle,
-                    TranslationAnimation.TranslationMode.TranslationAll, screenHeight / 5, 0)
+                    TranslationAnimation.TranslationMode.TranslationAll, screenHeight / 7, 0)
                     .arcMode(TranslationAnimation.ArcMode.ArcDownard)
-                    .additionStartPoint(screenWidth / 2 - tvProductTitle.getWidth() / 2)
+                    .additionStartPoint(screenWidth / 2 - tvProductTitle.getWidth())
                     .additionEndPoint(0)
                     .build();
 
