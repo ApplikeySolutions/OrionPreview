@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/white"
         android:orientation="vertical"
         android:paddingLeft="@dimen/default_margin"
         android:paddingRight="@dimen/default_margin"
-        android:paddingTop="@dimen/default_margin"
-        android:background="@android:color/white">
+        android:paddingTop="@dimen/default_margin">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,29 +23,33 @@
                 android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:fontFamily="sans-serif"
+                android:text="@string/product_price"
                 android:textColor="@android:color/black"
-                android:text="@string/product_price"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_price"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="14dp"
-                android:paddingLeft="14dp"
-                android:paddingRight="14dp"
-                android:textSize="12sp"
-                android:textColor="@android:color/black"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorProductStateBackground"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:text="@string/product_state"
-                android:background="@color/colorProductStateBackground"/>
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
 
             <ImageView
                 android:layout_width="4dp"
                 android:layout_height="16dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_options"/>
+                android:layout_marginTop="18dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_options" />
 
         </RelativeLayout>
 
@@ -57,66 +63,72 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_price"
-                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:text="@string/product_description_title"
                 android:textColor="@android:color/black"
-                android:text="@string/product_description_title"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_price"
                 android:layout_marginTop="12dp"
-                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/product_description"
                 android:textColor="@color/colorTextGray"
-                android:text="@string/product_description"/>
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/product_colors_title"
                     android:textColor="@android:color/black"
-                    android:text="@string/product_colors_title"/>
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:layout_width="@dimen/circles_size"
                     android:layout_height="@dimen/circles_size"
                     android:layout_marginLeft="24dp"
-                    android:src="@drawable/circle_white"/>
+                    android:src="@drawable/circle_white" />
 
                 <ImageView
                     android:layout_width="@dimen/circles_size"
                     android:layout_height="@dimen/circles_size"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/circle_black"/>
+                    android:src="@drawable/circle_black" />
 
                 <ImageView
                     android:layout_width="@dimen/circles_size"
                     android:layout_height="@dimen/circles_size"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/circle_blue"/>
+                    android:src="@drawable/circle_blue" />
 
                 <ImageView
                     android:layout_width="@dimen/circles_size"
                     android:layout_height="@dimen/circles_size"
-                    android:layout_marginLeft="8dp"
-                    android:src="@drawable/circle_yellow"/>
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/circle_yellow" />
 
             </LinearLayout>
 
             <Button
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/default_margin"
                 android:layout_marginBottom="@dimen/default_margin"
-                android:text="@string/product_buy_button_text"
-                android:background="@color/colorButtonBackground"/>
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/background_button"
+                android:backgroundTint="@null"
+                android:text="@string/product_buy_button_text" />
 
         </LinearLayout>
 
