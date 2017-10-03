@@ -1,4 +1,4 @@
-package com.applikeysolutions.animation.animation;
+package com.applikeysolutions.animation.orion;
 
 public abstract class BaseAnimation {
     public static final long LEAVE_ANIMATION_DURATION = 195L;
