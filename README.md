@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](https://github.com/AppliKeySolutions/Sena/blob/master/LICENSE)
 
-# Sena
+# Orion
 
 A simple animation with translation or scale views.
 
