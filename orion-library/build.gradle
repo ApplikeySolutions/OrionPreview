@@ -30,12 +30,13 @@ dependencies {
     provided 'com.android.support:appcompat-v7:25.1.1'
     testCompile 'junit:junit:4.12'
 }
+
 publish {
-    groupId = 'com.applikeysolutions'
-    artifactId = 'sena'
+    groupId = 'com.github.applikeysolutions'
+    artifactId = 'orion'
     publishVersion = '1.0'
     desc = 'A simple animation with translation or scale views.'
-    licences = ['Apache-2.0']
-    uploadName = 'Sena'
-    website = 'https://github.com/AppliKeySolutions/Sena'
+    licences = ['MIT']
+    uploadName = 'Orion'
+    website = 'https://github.com/AppliKeySolutions/Orion'
 }
