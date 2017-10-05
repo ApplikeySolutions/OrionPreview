@@ -1,18 +1,30 @@
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/AppliKeySolutions/Orion/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/badge/contact-@Applikey_-blue.svg?style=flat)](https://twitter.com/Applikey_)
 
 Made by [Applikey Solutions](https://applikeysolutions.com)
 
+<img src="screenshots/orion_preview.png" />
+
+# Table of Contents
+1. [Purpose](#purpose)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Demo](#demo)
+5. [Release Notes](#release-notes)
+6. [Contact Us](#contact-us)
+7. [License](#license)
+
+# Purpose
+
 A simple animation with translation or scale views.
 
-<img src="screenshots/orion_preview.gif?raw=true" alt="" width="640"/>
-
-## Getting Started
+# Installation
 
 ```groovy
 compile 'com.applikeysolutions:orion:1.0'
 ```
 
-## Usage
+# Usage
 ### Scale Animation
 ```java
 ScaleAnimation scaleAnimation =
@@ -41,6 +53,20 @@ Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(),
 blurredBitmap = blurAnimation.blur(MainActivity.this, originalBitmap)
 ```
 See [sample](sample/src/main/java/com/applikeysolutions/sample/MainActivity.java).
+
+# Release Notes
+
+Version 1.0.1
+
+- Release version.
+
+# Demo
+
+<img src="screenshots/orion_preview.gif?raw=true" alt="" width="640"/>
+
+# Contact Us
+
+You can always contact us via github@applikey.biz We are open for any inquiries regarding our libraries and controls, new open-source projects and other ways of contributing to the community. If you have used our component in your project we would be extremely happy if you write us your feedback and let us know about it!
 
 # License
 
