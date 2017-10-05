@@ -54,15 +54,15 @@ blurredBitmap = blurAnimation.blur(MainActivity.this, originalBitmap)
 ```
 See [sample](sample/src/main/java/com/applikeysolutions/sample/MainActivity.java).
 
+# Demo
+
+<img src="screenshots/orion_preview.gif?raw=true" alt="" width="640"/>
+
 # Release Notes
 
 Version 1.0.1
 
 - Release version.
-
-# Demo
-
-<img src="screenshots/orion_preview.gif?raw=true" alt="" width="640"/>
 
 # Contact Us
 
