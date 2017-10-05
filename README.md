@@ -7,6 +7,12 @@ A simple animation with translation or scale views.
 
 <img src="screenshots/orion_preview.gif?raw=true" alt="" width="640"/>
 
+## Getting Started
+
+```groovy
+compile 'com.applikeysolutions:orion:1.0'
+```
+
 ## Usage
 ### Scale Animation
 ```java
