@@ -30,7 +30,7 @@ compile 'com.github.applikeysolutions:orionpreview:1.0.1'
 ScaleAnimation scaleAnimation =
                         new ScaleAnimation.ScaleAnimationBuilder(view, scaleRate, scaleRate)
                         .build();
-scaleAnimation.show();
+scaleAnimation.showAnimation();
 ```
 ### Translation Animation
 ```java
@@ -41,7 +41,7 @@ TranslationAnimation tanslationAnimation =
                                                .additionStartPoint(startX)
                                                .additionEndPoint(endX)
                                                .build();
-tanslationAnimation.show();
+tanslationAnimation.showAnimation();
 ```
 ### Blur Animation
 ```java
