@@ -15,8 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.applikeysolutions.animation.BlurAnimation;
-import com.applikeysolutions.animation.orion.ScaleAnimation;
-import com.applikeysolutions.animation.orion.TranslationAnimation;
+import com.applikeysolutions.animation.orionpreview.ScaleAnimation;
+import com.applikeysolutions.animation.orionpreview.TranslationAnimation;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

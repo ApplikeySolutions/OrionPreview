@@ -33,10 +33,10 @@ dependencies {
 
 publish {
     groupId = 'com.github.applikeysolutions'
-    artifactId = 'orion'
-    publishVersion = '1.0'
+    artifactId = 'orionpreview'
+    publishVersion = '1.0.1'
     desc = 'A simple animation with translation or scale views.'
     licences = ['MIT']
-    uploadName = 'Orion'
-    website = 'https://github.com/AppliKeySolutions/Orion'
+    uploadName = 'OrionPreview'
+    website = 'https://github.com/AppliKeySolutions/OrionPreview'
 }

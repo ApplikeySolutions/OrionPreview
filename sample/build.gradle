@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    compile project(':orion-library')
+    compile project(':orion-preview-library')
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
