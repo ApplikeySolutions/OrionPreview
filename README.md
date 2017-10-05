@@ -21,7 +21,7 @@ A simple animation with translation or scale views.
 # Installation
 
 ```groovy
-compile 'com.applikeysolutions:orion:1.0'
+compile 'com.github.applikeysolutions:orionpreview:1.0.1'
 ```
 
 # Usage
